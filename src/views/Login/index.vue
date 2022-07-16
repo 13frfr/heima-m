@@ -51,7 +51,9 @@
         </template>
       </van-field>
       <div style="margin: 16px">
-        <van-button block type="info" native-type="submit">登录</van-button>
+        <van-button block type="info" native-type="submit">{{
+          !!$store.state.user.token ? '登录' : '未登录'
+        }}</van-button>
       </div>
     </van-form>
   </div>
