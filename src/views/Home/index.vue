@@ -2,7 +2,9 @@
   <div>
     <van-nav-bar class="navbar">
       <template #title>
-        <van-button round><van-icon name="search" />搜索</van-button>
+        <van-button round @click="$router.push('/search')"
+          ><van-icon name="search" />搜索</van-button
+        >
       </template>
     </van-nav-bar>
 
@@ -45,9 +47,11 @@ export default {
       myChannels: []
     }
   },
-  computed () {
+  computed: {
     // 登录状态
-    this.isLogin = this.$store.state.user.token
+    isLogin () {
+      return !!this.$store.state.user.token
+    }
   },
   components: {
     ArticleList,
