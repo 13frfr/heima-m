@@ -8,12 +8,12 @@
 // 频道持久化方案
 // 未登录状态 数据是默认的 存到本地存储中
 // 登录状态 数据是用户的 存储到服务器中
-import request from '@/utils/request'
+// import request from '@/utils/request'
 export default {
-  name: 'App',
-  created () {
-    console.dir(request)
-  }
+  name: 'App'
+  // created () {
+  //   console.dir(request)
+  // }
 }
 </script>
 

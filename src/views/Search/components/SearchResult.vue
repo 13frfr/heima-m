@@ -35,7 +35,7 @@ export default {
       const { data } = await SearchResult(2, 20, this.keywords)
       console.log(data)
       const res = getMyResult() || []
-      res.push(this.keywords)
+      res.unshift(this.keywords)
       const arr = Array.from(new Set(res))
       setMyResult(arr)
       this.searchlist = data.data.results

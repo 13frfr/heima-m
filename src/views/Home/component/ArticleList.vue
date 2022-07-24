@@ -19,6 +19,7 @@
           v-for="item in articles"
           :key="item.atr_id"
           :articleInfo="item"
+          @click.native="godetails(item.art_id)"
         ></ArticleItem>
       </van-list>
     </van-pull-refresh>
@@ -56,6 +57,14 @@ export default {
     this.getArticleList()
   },
   methods: {
+    godetails (artistId) {
+      this.$router.push({
+        path: '/details',
+        query: {
+          artistId
+        }
+      })
+    },
     // 获取频道文章 并处理 文章数据
     async getArticleList () {
       try {

@@ -9,8 +9,8 @@ const request = axios.create({
 
 // 拦截器
 // 添加请求拦截器
-axios.interceptors.request.use(
-  function (config) {
+request.interceptors.request.use(
+  (config) => {
     // 在发送请求之前做些什么
     // config添加token
     const token = store.state.user.token

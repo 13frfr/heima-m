@@ -25,7 +25,7 @@
           <!-- 右侧编辑资料 -->
           <van-col span="11">
             <van-row class="code-row" type="flex" align="center" justify="end">
-              <van-button class="code-btn" size="mini" round
+              <van-button class="code-btn" size="mini" round @click="gouserinfo"
                 >编辑资料</van-button
               >
             </van-row>
@@ -107,6 +107,10 @@ export default {
     this.getUserInfo()
   },
   methods: {
+    // 去个人资料编辑页面
+    gouserinfo () {
+      this.$router.push('/user')
+    },
     // 退出登录
     logout () {
       this.$dialog
